@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section style="margin-top:13%">
+        <h2 id="text" ><span>It's time for a new</span><br>Adventure</h2>
+        <img src="bird1.png" id="bird1">
+        <img src="bird2.png" id="bird2">
+        <img src="forest.png" id="forest">
+
+        <a href="#" id="btn">Explore</a>
+
+        <img src="rocks.png" id="rocks">
+        <img src="water.png" id="water">
+    </section>
+    <div class="sec">
+        <h2>Animated Jungle</h2>
+        <p>A jungle is a forest thick with trees, other plants, and animals. Jungles are a little dangerous, which is what people mean when they say, "It's a jungle out there!"<br>
+           <br> Jungles — thick tropical forests — are full of life: birds, insects, reptiles, monkeys, and often gorillas and other animals. They're dangerous places, even for the animals that live there. This is why jungle also means any place that is risky or wild. If someone does something a dishonest or shady to get their way, some people will say that's "The law of the jungle," meaning you have to do some shifty things to survive.
+    <br>
+    <br>
+    br
+    A jungle is land covered with dense forest and tangled vegetation, usually in tropical climates. Application of the term has varied greatly during the past recent century.<br>
+    <br>
+    The jungle is the richest habitat on Earth. Over the intervals of time, different parts of tropical areas have provided a variety of flora and fauna, together with newer species discovered annually. Tropical jungles have been the home to indigenous peoples, who have shaped traditional cultures and civilizations based on the environment.
+</p>
+    
+</div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top =  value * -1.5 + 'px';
+            bird1.style.left =  value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left =   value * -5 + 'px';
+            btn.style.marginTop =  value * 1.5 + 'px';
+            rocks.style.top =  value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+
+        })
+    </script>
+</body>
+</html>
